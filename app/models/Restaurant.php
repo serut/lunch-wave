@@ -10,66 +10,27 @@ class Restaurant extends Eloquent {
     protected $primaryKey = 'id';
    	// Une moulinette entre les donneés de l'ancienne base de données vers la nouvelle
     public function initialisation(){
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/mcdonald-big-mac_gallery2.jpg";
-		$restaurant->categorie ="Gras";
-		$restaurant->nom ="MacDo";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/10379_01_00.jpg";
-		$restaurant->categorie ="Illimité";
-		$restaurant->nom ="Flunch";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/snack-americain-vintage-tommys-diner-7-944x615.jpg";
-		$restaurant->categorie ="Gras";
-		$restaurant->nom ="Tommy's";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/pizza-del-arte-paris-1349599210.jpg";
-		$restaurant->categorie ="Rafine";
-		$restaurant->nom ="Del Arte";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/BuffetChinois.jpg";
-		$restaurant->categorie ="Illimité";
-		$restaurant->nom ="Chinois";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/burger-danys.jpg";
-		$restaurant->categorie ="Gras";
-		$restaurant->nom ="Dany's burger";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/1837-coffret-salade.jpg";
-		$restaurant->categorie ="Sandwich";
-		$restaurant->nom ="Class Croute";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/a8174542-0438-11df-9293-2147a92c2c7c.jpg";
-		$restaurant->categorie ="Pas cher";
-		$restaurant->nom ="Sandwich Carrefour";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/KFC_home.png";
-		$restaurant->categorie ="Gras";
-		$restaurant->nom ="KFC";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/b3138210.jpg";
-		$restaurant->categorie ="Gras";
-		$restaurant->nom ="Quick";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/diet.jpg";
-		$restaurant->categorie ="-";
-		$restaurant->nom ="Ne mange pas !";
-		$restaurant->save();
-		$restaurant  = new Restaurant;
-		$restaurant->logo ="/restau/97538710.jpg";
-		$restaurant->categorie ="-";
-		$restaurant->nom ="Gamelle";
-		$restaurant->save();
+    	$resto = array(
+    				array("/restau/mcdonald-big-mac_gallery2.jpg","MacDo"),
+    				array("/restau/10379_01_00.jpg","Flunch"),
+    				array("/restau/snack-americain-vintage-tommys-diner-7-944x615.jpg","Tommy's"),
+    				array("/restau/pizza-del-arte-paris-1349599210.jpg","Del Arte"),
+    				array("/restau/BuffetChinois.jpg","Chinois"),
+    				array("/restau/burger-danys.jpg","Dany's burger"),
+    				array("/restau/1837-coffret-salade.jpg","Class Croute"),
+    				array("/restau/a8174542-0438-11df-9293-2147a92c2c7c.jpg","Sandwich Carrefour"),
+    				array("/restau/KFC_home.png","KFC"),
+    				array("/restau/b3138210.jpg","Quick"),
+    				array("/restau/diet.jpg","Ne mange pas !"),
+    				array("/restau/97538710.jpg","Gamelle"),
+    				array("/restau/lapataterie2.jpg","La pataterie"),
+				);
+    	foreach ($resto as $k => $v) {
+    		$restaurant  = new Restaurant;
+			$restaurant->logo =$v[0];
+			$restaurant->nom =$v[1];
+			$restaurant->save();
+    	}
     }
     public function vouloir()
     {

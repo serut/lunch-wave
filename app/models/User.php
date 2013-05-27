@@ -15,39 +15,11 @@ class User extends Eloquent {
     	return $restau;
     }
     public function addUsers(){
-    	$user  = new User;
-		$user->pseudo ="Thomas";
-		$user->save();
-    	$user  = new User;
-		$user->pseudo ="Rémi";
-		$user->save();
-    	$user  = new User;
-		$user->pseudo ="Imed";
-		$user->save();
-    	$user  = new User;
-		$user->pseudo ="Adrien";
-		$user->save();
-        $user  = new User;
-        $user->pseudo ="Philippe";
-        $user->save();
-        $user  = new User;
-        $user->pseudo ="Séverine";
-        $user->save();
-        $user  = new User;
-        $user->pseudo ="Anthony";
-        $user->save();
-        $user  = new User;
-        $user->pseudo ="François";
-        $user->save();
-        $user  = new User;
-        $user->pseudo ="Léo";
-        $user->save();
-        $user  = new User;
-        $user->pseudo ="Florent";
-        $user->save();
-        $user  = new User;
-        $user->pseudo ="Vincent";
-        $user->save();
+        $users = array("Thomas","Rémi","Imed","Adrien","Philippe","Séverine","Anthony","François","Léo","Florent","Vincent");
+        foreach ($users as $k => $v) {
+            $user  = new User;
+            $user->pseudo =$v;
+            $user->save();
+        }
     }
-
 }

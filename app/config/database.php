@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => '192.168.224.44',
-			'database'  => 'wsbadmin_dev_mona',
+			'database'  => '',
 			'username'  => 'root',
 			'password'  => 'netwave',
 			'charset'   => 'utf8',

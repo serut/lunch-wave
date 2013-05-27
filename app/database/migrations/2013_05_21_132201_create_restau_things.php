@@ -44,14 +44,14 @@ class CreateRestauThings extends Migration {
 			$table->timestamps();
 		});
 
-		Schema::create('vouloir', function($table){
+		/*Schema::create('vouloir', function($table){
 			$table->engine = 'InnoDB';
 			$table->integer('id_user');
 			$table->integer('id_restaurant');
 			$table->boolean('interesse');
 			$table->date('create_at');
 			$table->unique(array('create_at','id_user','id_restaurant'));
-		});
+		});*/
 		$restau = new Restaurant();
 		$mesRestaurants = $restau->initialisation();
 		$user = new User();
@@ -70,7 +70,7 @@ class CreateRestauThings extends Migration {
 		Schema::dropIfExists('categorie');
 		Schema::dropIfExists('user');
 		Schema::dropIfExists('manger');
-		Schema::dropIfExists('vouloir');
+		//Schema::dropIfExists('vouloir');
 	}
 
 }
