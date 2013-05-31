@@ -1,9 +1,4 @@
-
 <!DOCTYPE html>
-
-<!--[if IE 7]>                  <html class="ie7 no-js" lang="en">     <![endif]-->
-<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,19 +8,8 @@
 	<link rel="shortcut icon" href="/assets/restau/favicon.ico">
 	<meta name="description" content="">
 	<meta name="author" content="lmieulet">
-	
-	<!--[if !lte IE 6]><!-->
-		<link rel="stylesheet" href="{{ asset("/assets/restau/style.css")}}" media="screen" />
-
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic" />
-		
-		<link rel="stylesheet" href="{{ asset("/assets/restau/fancybox.min.css")}}" media="screen" />
-
-		<link rel="stylesheet" href="{{ asset("/assets/restau/video-js.min.css")}}" media="screen" />
-
-		<link rel="stylesheet" href="{{ asset("/assets/restau/audioplayerv1.min.css")}}" media="screen" />
-	<!--<![endif]-->
-
+	<link rel="stylesheet" href="{{ asset("/assets/restau/style.min.css")}}">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic">
 </head>
 <body>
 
@@ -122,16 +106,6 @@
 
 <!--[if !lte IE 6]><!-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="{{ asset("/assets/restau/jquery-1.7.1.min.js")}}"><\/script>')</script>
-	<script src="{{ asset("/assets/restau/jquery.ui.widget.min.js")}}"></script>
-	<script src="{{ asset("/assets/restau/respond.min.js")}}"></script>
-	<script src="{{ asset("/assets/restau/jquery.easing-1.3.min.js")}}"></script>
-	<script src="{{ asset("/assets/restau/jquery.fancybox.pack.js")}}"></script>
-	<script src="{{ asset("/assets/restau/jquery.smartStartSlider.min.js")}}"></script>
-	<script src="{{ asset("/assets/restau/jquery.cycle.all.min.js")}}"></script>
-	<script src="{{ asset("/assets/restau/jquery.isotope.min.js")}}"></script>
-	<script src="{{ asset("/assets/restau/audioplayerv1.min.js")}}"></script>
-	<script src="{{ asset("/assets/restau/jquery.touchSwipe.min.js")}}"></script>
 	<script src="{{ asset("/assets/restau/custom.js")}}"></script>
 	<script type="text/javascript">
 		@if (empty($id_user))
